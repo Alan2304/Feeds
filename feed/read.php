@@ -14,11 +14,7 @@ $db = $database->getConnection();
 //Initialize object
 $feed = new Feed($db);
 
-//Set the search of the feeds
-$keywords=isset($_GET["s"]) ? $_GET["s"] : "";
-
-//Query the feeds
-$stmt = $feed->search($keywords);
+$stmt = $feed->all();
 $num = $stmt->rowCount();
 
 if ($num > 0) {
@@ -33,7 +29,9 @@ if ($num > 0) {
 
         $feedItem = Array(
             "title" => $title,
-            "date" => $date
+            "description" => $description,
+            "date" => $date,
+            "permalink" => $permalink
         );
 
         array_push($feedsArr["records"], $feedItem);
@@ -44,7 +42,6 @@ if ($num > 0) {
 
     //Show products data
     echo json_encode($feedsArr);
-
 }else{
     // set response code - 404 Not found
     http_response_code(404);
@@ -54,5 +51,6 @@ if ($num > 0) {
         array("message" => "No notices found.")
     );
 }
+
 
 ?>
