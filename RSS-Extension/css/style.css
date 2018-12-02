@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.rss i{
+    font-size: 20px;
+    color: orangered;
+}
+
+#listFeeds{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#listFeeds li p{
+    margin: 0;
+    font-size:14px;
+    font-family: 'roboto';
+}
+
+li.listItem{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-left: 6px solid orangered;
+    background-color: rgb(233, 233, 233);
+}
+
+label{
+    font-size:16px;
+    font-family: 'roboto';
+}
+
+.btnSearch{
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+input{    
+    width: 235px;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    font-family: 'roboto';
+}
+
+span.search{
+    font-size: 20px;
+}
+
+.container{
+    width: 300px;
+}
+
+a.button{
+    display:inline-block;
+      
+      font:normal normal 300 1.3em 'Open Sans';
+      text-decoration:none;	
+      
+      color:orangered;
+      brackground-color:transparent;
+      border:1px solid orangered;
+      border-radius:100px;
+      
+      padding: .3em 1.2em;
+      margin:5px;
+              
+      background-size: 200% 100%;	
+      background-image: linear-gradient(to right, transparent 50%, orangered 50%);
+      transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+  }
+  
+  a.button:hover{
+      color:rgba(255, 255, 255, 1);
+      background-color:orangered;
+      background-position: -100% 100%;
+  }
+
+
+  .loadNotices{
+      display: none;
+      width: 110px;
+      height: 30px;
+  }
+
+  .ok{
+      font-size: 16px;
+      background: green;
+      padding: 2px 5px;
+      color: white;
+      border-radius: 3px;
+      display: none;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 14px;
+    border: 2px solid black;
+    margin: 10px;
+    animation: rotate 2s infinite linear;
+    animation-fill-mode: both; 
+    display: inline-block;
+  }
+  
+  .circle:nth-of-type(2) {
+      animation: rotate2 2s infinite linear;
+    animation-fill-mode: both; 
+  }
+  
+  .circle:nth-of-type(3) {
+      animation: rotate3 2s infinite linear;
+    animation-fill-mode: both; 
+  }
+  
+  @keyframes rotate {
+    0% { 
+      transform: scale(0);
+      opacity: 0;
+    }
+    25% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    75% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    85% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% { 
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes rotate2 {
+    0% { 
+      transform: scale(0);
+      opacity: 0;
+    }
+    25% { 
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    75% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    85% { 
+      transform: scale(1);
+      opacity: 1;
+    } 
+    100% { 
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes rotate3 {
+    0% { 
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% { 
+      transform: scale(0);
+      opacity: 0;
+    }
+    75% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    85% { 
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% { 
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  

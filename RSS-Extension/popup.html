@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <label for="search"><span class="rss"><i class="fa fa-rss-square" aria-hidden="true"></i></span> Find a Notice</label>
+        <div class="field-input">
+            <input type="text" id="search" name="search" placeholder="Search a notice" class="search-box"><button class="btnSearch"><i class="fa fa-search search" aria-hidden="true"></i></button>
+        </div>
+        <p id="feeds"></p>
+        <ul id="listFeeds">
+        </ul>
+
+    <a class="button" href="#" title="Refrescar Noticias" id="refresh">Indexar</a><span class="ok" id="success"><i class="fa fa-check" aria-hidden="true"></i></span>
+    <div class="loadNotices" id="loading">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
