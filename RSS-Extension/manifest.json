@@ -11,8 +11,7 @@
     ],
     "options_page": "options.html",
     "background": {
-        "scripts":["background.js"],
-        "persistent":false
+        "page":"background.html"
     },
     "page_action":{
         "default_popup":"popup.html",

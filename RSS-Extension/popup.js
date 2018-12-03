@@ -1,3 +1,4 @@
+//Logic to search what the user needs to
 let searchFeed = document.getElementById('search');
 let divFeed = document.getElementById('feeds');
 let listFeeds = document.getElementById('listFeeds');
@@ -23,6 +24,7 @@ searchFeed.oninput = function(element){
     xhr.send();
 }
 
+//Logic to refresh the database, is the process to indexing
 let refresh = document.getElementById('refresh');
 let loading = document.getElementById('loading');
 let success = document.getElementById('success');
@@ -32,7 +34,7 @@ refresh.onclick = function(){
     xhr.open("GET", "http://localhost/RSS/Feeds/feeds.php", true);
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4){
-            var resp = JSON.parse('' + xhr.responseText + '');
+            var resp = JSON.parse(xhr.responseText);
             if(resp.response){
                 loading.style.display = 'none';
                 setTimeout(function(){
@@ -44,7 +46,7 @@ refresh.onclick = function(){
     xhr.send();
 }
 
-
+//Create a li, that contains a feed info and append to the DOM of the popup
 function createFeedItem(feed){
     var listItem = document.createElement('li');
     listItem.classList += 'listItem';
